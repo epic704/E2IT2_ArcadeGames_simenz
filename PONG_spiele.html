@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+	<!-- Zeichensatzkodierung festlegen -->
+	<meta http-equiv="Content Type" content="text/html" charset="utf-8" />
+	<!-- Viewport festlegen -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">		
+	<!-- Stylesheet laden -->
+	<link rel="stylesheet" href="styles.css" type="text/css" />		
+	<!-- jQuery laden -->
+	<script charset="utf-8" src='jquery-3.6.0.min.js' type='text/javascript'> </script>
+	<!-- Titel festlegen -->
+	<title>Pong</title>
+    <style>
+        #spielfeld{
+            position: absolute;
+	        width: 10px;
+	        height: 10px;
+            border: 1px solid black;
+            background-color: cyan;
+        }
+        #ball{
+            position: absolute;
+            width: 10px;
+	        height: 10px;
+            border: 1px solid black;
+            border-radius: 25%;
+            background-color: white;
+            top: 10px;
+            left: 10px;    
+        }
+        #s1{
+            position: absolute;
+            width: 10px;
+	        height: 10px;
+            border: 1px solid black;
+            border-radius: 25%;
+            background-color: red;
+            top: 10px;
+            left: 10px;
+        }
+        #s2{
+            position: absolute;
+            width: 10px;
+	        height: 10px;
+            border: 1px solid black;
+            border-radius: 25%;
+            background-color: blue;
+            top: 10px;
+            right: 10px;
+        }
+    </style>
+</head>
+<body>
+<!-- HTML-Code -->
+<h1>Pong</h1>
+<div id="spielfeld">
+   <div id="ball"></div>
+   <div id="s1"></div>
+   <div id="s2"></div>
+</div>
+
+
+
+<!-- Javascript-Code -->
+<script>
+    var spielfeld_x = 800;
+    var spielfeld_y = 600;
+    var ballgross_x = 20;
+    var ballgross_y = 20;
+    var ball_x = spielfeld_x/2 - ballgross_x/2;
+    var ball_y = spielfeld_y/2 - ballgross_y/2;
+    var ball_speed;
+    var ballrichtung_x;
+    var ballrichtung_y;
+    var s1gross_x = 15;
+    var s1gross_y = 75;
+    var s2gross_x = 15;
+    var s2gross_y = 75;
+    var s1_x = 10;
+    var s1_y = spielfeld_y/2 - s1gross_y/2;
+    var s2_x = 10;
+    var s2_y = spielfeld_y/2 - s2gross_y/2;
+    var punkte1;
+    var punkte2;
+    var sb = 10;
+
+// Wenn Seite geladen ist
+$(document).ready(function() {
+
+    $("#spielfeld").css("width", spielfeld_x + "px").css("height", spielfeld_y + "px");
+    $("#ball").css("width", ballgross_x + "px").css("height", ballgross_y + "px");
+    $("#s1").css("width", s1gross_x + "px").css("height", s1gross_y + "px");
+    $("#s2").css("width", s2gross_x + "px").css("height", s2gross_y + "px");
+    $("#ball").css("left", ball_x + "px").css("top", ball_y + "px");
+    $("#s1").css("left", s1_x + "px").css("top", s1_y + "px");
+    $("#s2").css("right", s2_x + "px").css("top", s2_y + "px");
+
+    $(document).keydown(function(event) {
+        var key = String.fromCharCode(event.keyCode).toUpperCase();
+        switch(key) {
+            case 'W':
+                if(s1_y >= sb/2){
+                    s1_y = s1_y - sb;
+                    $("#s1").css("left", s1_x + "px").css("top", s1_y + "px").show();
+                }
+                break;
+            case 'S':
+                if(s1_y <= spielfeld_y - s1gross_y - sb){
+                    s1_y = s1_y + sb;
+                    $("#s1").css("left", s1_x + "px").css("top", s1_y + "px").show();
+                }
+                break;
+            case 'O':
+                if(s2_y >= sb/2){
+                    s2_y = s2_y - sb;
+                     $("#s2").css("right", s2_x + "px").css("top", s2_y + "px").show();
+                }
+                break;
+            case 'L':
+                if(s2_y <= spielfeld_y - s2gross_y - sb){
+                    s2_y = s2_y + sb;
+                    $("#s2").css("right", s2_x + "px").css("top", s2_y + "px").show();
+                }
+                break;
+            }
+        })
+        $(document).keydown(function(event) {
+            
+        })
+	})	// end of document.ready
+</script>
+
+</body>
+</html>
