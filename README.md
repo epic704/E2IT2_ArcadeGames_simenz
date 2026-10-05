@@ -13,5 +13,5 @@ Soll im klassischen Retro Arcade gehalten werden
 HTML Grundstruktur erstellen
 
 ## TO-DO
-alles dokumentieren was es tut
+alles dokumentieren was es tut und
 besser die dateien strukturieren
