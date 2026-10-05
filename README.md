@@ -11,3 +11,7 @@ Soll im klassischen Retro Arcade gehalten werden
 
 ## Erste Schritte
 HTML Grundstruktur erstellen
+
+## TO-DO
+alles dokumentieren was es tut
+besser die dateien strukturieren
