@@ -9,9 +9,6 @@ Repository für die Entwiocklung des Web Projekts.
 ## Optick
 Soll im klassischen Retro Arcade gehalten werden
 
-## Erste Schritte
-HTML Grundstruktur erstellen
-
 ## TO-DO
 - Alles dokumentieren was der Code wo tut
 - Ping-Pong fertig mit javaskript machen
@@ -24,6 +21,7 @@ HTML Grundstruktur erstellen
 - Testen
 
 ## Erledigt
+- HTML Grundstruktur erstellen
 - Datei Struktur angepasst
 - Dateien untereinander verbunden
 - Ein altes schon Programmiertes Spiel hochgeladen und mit dem Anpassungen getestet
