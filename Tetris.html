@@ -5,9 +5,7 @@
 	    <!-- Viewport festlegen -->
 	    <meta name="viewport" content="width=device-width, initial-scale=1.0">		
 	    <!-- Stylesheet laden -->
-	    <link rel="stylesheet" href="./css/Tetris-styles.css" type="text/css" />		
-	    <!-- jQuery laden -->
-	    <script charset="utf-8" src='./javaskript/jquery-3.6.0.min.js' type='text/javascript'> </script>
+	    <link rel="stylesheet" href="./css/Tetris-styles.css" type="text/css" />
 	    <!-- Titel festlegen -->
         <title>Tetris</title>
     </head>
@@ -24,19 +22,10 @@
 
 
 
-        <!-- Javascript-Code -->
-<script>
-    var spielfeld_x = 800;
-    var spielfeld_y = 600;
-   
 
-    // Wenn Seite geladen ist
-    $(document).ready(function() {
-        
-    $("#spielfeld").css("width", spielfeld_x + "px").css("height", spielfeld_y + "px");       
-        
-	})	// end of document.ready
-</script>
-
+	    <!-- jQuery laden -->
+	    <script src="./javaskript/jquery-3.6.0.min.js"> </script>
+        <!-- JavaSkript laden -->
+        <script src="./javaskript/Tetris-skript.js"></script>
     </body>
 </html>
