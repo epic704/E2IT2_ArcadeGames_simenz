@@ -1,7 +1,8 @@
- #spielfeld{
-            position: absolute;
-	        width: 10px;
-	        height: 10px;
-            border: 1px solid black;
-            background-color: cyan;
-        }
+@charset "utf-8";
+#spielfeld{
+    position: absolute;
+	width: 10px;
+	height: 10px;
+    border: 1px solid black;
+    background-color: cyan;
+    }
