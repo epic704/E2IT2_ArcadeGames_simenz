@@ -1,13 +1,11 @@
 # ArcadeGames
 Repository für die Entwiocklung des Web Projekts.
 
-## Geplante Reaturs
+## Ziele und Featurs
 - 3 Games Tetris, Snack, Ping Pong und vielleicht noch andere
 - Benutzer Accunts
 - Globalen Highstore
-
-## Optick
-Soll im klassischen Retro Arcade gehalten werden
+- Optisch im Style von Arcade Games
 
 ## TO-DO
 - Alles dokumentieren was der Code wo tut
