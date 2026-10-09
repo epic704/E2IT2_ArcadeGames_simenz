@@ -1,23 +1,21 @@
-    var spielfeld_x = 800;
-    var spielfeld_y = 600;
-    var ballgross_x = 20;
-    var ballgross_y = 20;
-    var ball_x = spielfeld_x/2 - ballgross_x/2;
-    var ball_y = spielfeld_y/2 - ballgross_y/2;
-    var ball_speed;
-    var ballrichtung_x;
-    var ballrichtung_y;
-    var s1gross_x = 15;
-    var s1gross_y = 75;
-    var s2gross_x = 15;
-    var s2gross_y = 75;
-    var s1_x = 10;
-    var s1_y = spielfeld_y/2 - s1gross_y/2;
-    var s2_x = 10;
-    var s2_y = spielfeld_y/2 - s2gross_y/2;
-    var punkte1;
-    var punkte2;
-    var sb = 10;
+    
+var spielfeld_x = 800;
+var spielfeld_y = 600;
+var ballgross_x = 20;
+var ballgross_y = 20;
+var ball_x = spielfeld_x/2 - ballgross_x/2;
+var ball_y = spielfeld_y/2 - ballgross_y/2;
+var ball_speed = 5;
+var ballrichtung_x = 1;
+var ballrichtung_y = 1;
+var s1gross_x = 15;
+var s1gross_y = 75;
+var s2gross_x = 15;
+var s2gross_y = 75;
+var s2_y = spielfeld_y/2 - s2gross_y/2;
+var punkte1 = 0;
+var punkte2 = 0;
+var sb = 10;
 
 // Wenn Seite geladen ist
 $(document).ready(function() {
