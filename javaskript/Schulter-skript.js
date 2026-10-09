@@ -1,5 +1,5 @@
-var spielfeld_x=600;
-var spielfeld_y=400;
+var spielfeld_x=1000;
+var spielfeld_y=600;
 var zielradius=50;
 var startzeit;
 var stopzeit;
@@ -28,6 +28,9 @@ function maleStatus(){
 
 // Wenn Seite geladen ist
 $(document).ready(function() {
+
+	$("#spielfeld").css("width", spielfeld_x + "px").css("height", spielfeld_y + "px");
+	$("#status").css("width", spielfeld_x + "px");
 
     $("#knopf").click(function(event){
 	event.stopPropagation(); 
