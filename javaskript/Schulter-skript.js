@@ -1,4 +1,4 @@
-var spielfeld_x=1000;
+var spielfeld_x=800;
 var spielfeld_y=600;
 var zielradius=50;
 var startzeit;
@@ -50,7 +50,7 @@ $(document).ready(function() {
 	    //maleStatus();
 	    clearTimeout(timer2);
 
-	    if(zaehler >= spielende){
+	    if(leben == 0){
 	        clearTimeout(timer1)
 		    $("#ziel").hide();
 			var jetzt=new Date();
@@ -78,8 +78,11 @@ $(document).ready(function() {
 			$("#ziel").hide();
 	    }
 	    else{
-	        leben = leben - 10;
-	    }
+	        leben = leben - 5;
+			if(zaehler >= 5){
+				leben = leben - 10;
+	    	}
+		}
     })
 
 })	// end of document.ready

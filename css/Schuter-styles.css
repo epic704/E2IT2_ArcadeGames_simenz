@@ -38,6 +38,7 @@
 	position: absolute;
 	bottom: 0;
 	text-align: center;
+	place-items: center; 
 	margin-bottom: 50px;
 	width: 100%;
 	border-radius: 10px;
