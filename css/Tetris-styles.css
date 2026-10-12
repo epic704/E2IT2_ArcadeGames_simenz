@@ -8,16 +8,21 @@
 	margin:0 auto;
 	padding-top:25px;
 }
-.canvas_wrap>*{
+.canvas_wrap>*{ /* Wähle alle direkten Kinderelemente von .canvas_wrap aus */
 	display:block;
 	margin:0 auto;
 	border: 1px solid #ffffff;
 }
-.canvas_wrap>button{
+.canvas_wrap>button{ /* Wähle das Button-Element innerhalb von .canvas_wrap aus */
 	font-family:Courier;
 	font-size:30px;
 	font-weight:bold;
 	border:none;
 	background-color:#ffffff;
 	color:#000000;
+}
+#tetris{
+    background-color:#000000;
+    width:240px;
+    height:400px;
 }
