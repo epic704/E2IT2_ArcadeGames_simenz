@@ -10,7 +10,7 @@ Repository für die Entwiocklung des Web Projekts.
 ## TO-DO
 - Alles dokumentieren was der Code wo tut
 - Ping-Pong fertig mit javaskript machen
-- Snack und Tertris javaskript und leites CSS
+- Snack und Tertris mit (canvas), javaskript und CSS
 - Mit CSS Optik machen
 - Punkte System erstellen
 - Möglichkeit Benutzer erstellen hinzufügen
@@ -23,3 +23,4 @@ Repository für die Entwiocklung des Web Projekts.
 - Datei Struktur angepasst
 - Dateien untereinander verbunden
 - Ein altes schon Programmiertes Spiel hochgeladen und mit dem Anpassungen getestet
+- 
