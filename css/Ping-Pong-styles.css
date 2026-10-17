@@ -65,3 +65,16 @@
     transform: translate(0, 0);
   }
 }
+a:link{
+    color: blue;
+}
+a:hover{
+    color: green;
+}
+button:hover{
+    background-color: gray;
+    border: 1px, solid, black;
+}
+button:active{
+    background-color: red;
+}

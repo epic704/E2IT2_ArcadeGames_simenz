@@ -26,3 +26,16 @@
     width:240px;
     height:400px;
 }
+a:link{
+    color: blue;
+}
+a:hover{
+    color: green;
+}
+button:hover{
+    background-color: gray;
+    border: 1px, solid, black;
+}
+button:active{
+    background-color: red;
+}
