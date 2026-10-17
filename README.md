@@ -13,9 +13,7 @@ Repository für die Entwiocklung des Web Projekts.
 - Snack und Tertris mit (canvas), javaskript und CSS
 - Mit CSS Optik machen
 - Punkte System erstellen
-- Möglichkeit Benutzer erstellen hinzufügen
-- Anmelde Fenster erstellen
-- Höstpunkt zahlen anzeigen lassen gesamt und für Jedes Spiel einzeln
+- Höstpunkt zahlen anzeigen lassen für Jedes Spiel einzeln
 - Testen
 
 ## Erledigt
@@ -23,4 +21,6 @@ Repository für die Entwiocklung des Web Projekts.
 - Datei Struktur angepasst
 - Dateien untereinander verbunden
 - Ein altes schon Programmiertes Spiel hochgeladen und mit dem Anpassungen getestet
+- CSS Style angefangen
+- Pseudoklassen eingefügt
 - 
