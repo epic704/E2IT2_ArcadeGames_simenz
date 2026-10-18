@@ -1,4 +1,7 @@
 @charset "utf-8";
+.body{
+    background-color: #1645F5;
+}
 #spielfeld{
     position: absolute;
 	width: 10px;
