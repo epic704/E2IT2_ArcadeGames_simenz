@@ -1,5 +1,12 @@
 @charset "utf-8";
 body {
+  	background: repeating-linear-gradient(
+    	0deg,
+    	#ff007f,
+    	#ff007f 10px,
+    	#7928ca 10px,
+    	#7928ca 20px
+    );
 }
 #spielfeld{
 	position: absolute;
