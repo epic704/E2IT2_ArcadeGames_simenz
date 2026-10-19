@@ -1,5 +1,5 @@
 @charset "utf-8";
-body{
+body {
     background-color: #1645F5;
 }
 #spielfeld{
@@ -61,7 +61,7 @@ body{
   box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.1), 3px 5px 15px rgba(0, 0, 0, 0.15);
 }
 /* Das grüne Blatt am oberen Rand */
-#orange-snack::after{
+#orange::after{
   content: '';
   position: absolute;
   top: -20px;
