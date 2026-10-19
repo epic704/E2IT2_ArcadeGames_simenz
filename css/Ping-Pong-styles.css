@@ -1,4 +1,6 @@
 @charset "utf-8";
+body {
+}
 #spielfeld{
     position: relative;
 	width: 10px;
