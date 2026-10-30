@@ -1,5 +1,23 @@
+body {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 16px;
+}
 
+main {
+    text-align: center;
+}
 
+table {
+    margin: 0 auto;
+}
+nav ul {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    list-style: none;
+    padding: 0;
+}
 a:link{
     color: blue;
 }
