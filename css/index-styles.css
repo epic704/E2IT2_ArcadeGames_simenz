@@ -45,8 +45,16 @@ nav img {
     object-fit: contain;
 }
 table {
+    width: 100%;
+    margin: 0 auto;
+    border-collapse: collapse;
     border-collapse: separate;
     border-spacing: 50px 0;
+}
+
+td {
+    padding: 12px 24px;
+    font-size: 18px;
 }
 a:link{
     color: #42f5e9;
@@ -60,4 +68,18 @@ button:hover{
 }
 button:active{
     background-color: red;
+}
+@font-face {
+  font-family: 'MeinPixelFont';
+  src: url('fonts/mein-pixel-font.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}.pixel-text {
+  font-family: 'MeinPixelFont', monospace;
+  font-smooth: never;
+  -webkit-font-smoothing: none;
+  -moz-osx-font-smoothing: unset;
+  font-size: 16px;
+  line-height: 1;
+  image-rendering: pixelated; 
 }
