@@ -2,8 +2,8 @@
 Repository für die Entwiocklung des Web Projekts.
 
 ## Ziele und Featurs
-- 3 Games Tetris, Snack, Ping Pong und vielleicht noch andere
-- Benutzer Accunts
+- Ping Pong und Aktion spiel
+- Benutzer Accunts vielleicht
 - Globalen Highstore
 - Optisch im Style von Arcade Games
 
