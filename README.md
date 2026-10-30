@@ -22,4 +22,5 @@ Repository für die Entwiocklung des Web Projekts.
 - Ein altes schon Programmiertes Spiel hochgeladen und mit dem Anpassungen getestet
 - CSS Style angefangen
 - Pseudoklassen eingefügt
-- 
+- HTML Struktur in index gemacht
+- CSS für index.html verbessert
