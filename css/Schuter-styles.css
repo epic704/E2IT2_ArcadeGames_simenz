@@ -1,12 +1,10 @@
 @charset "utf-8";
 body {
-  	background: repeating-linear-gradient(
-    	0deg,
-    	#ff007f,
-    	#ff007f 10px,
-    	#7928ca 10px,
-    	#7928ca 20px
-    );
+  	max-width: 900px;
+    margin: 0 auto;
+    padding: 0 16px;
+    background: linear-gradient(135deg, #0b1020, #241044);
+    color: white;
 }
 #spielfeld{
 	position: absolute;
@@ -63,7 +61,7 @@ body {
 	border: 1px solid black;
 	}
 a:link{
-    color: blue;
+    color: #42f5e9;
 }
 a:hover{
     color: green;
