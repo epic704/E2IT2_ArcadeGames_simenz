@@ -1,8 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
 
 body {
+  font-family: "Press Start 2P", monospace;
   background: linear-gradient(90deg, #120327 0%, #2b0d47 40%, #3d1369 100%);
   display: grid;
+/*
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-areas: "h h"
+                       "n n"
+                       "m a"
+                       "f f";
+  gap: 25px;
+*/
   place-items: center;
   min-height: 50vh;
   margin: 0;
@@ -15,6 +24,7 @@ body {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+  
 }
 
 .retro-title {
