@@ -1,11 +1,4 @@
 @charset "utf-8";
-body {
-  	max-width: 900px;
-    margin: 0 auto;
-    padding: 0 16px;
-    background: linear-gradient(135deg, #0b1020, #241044);
-    color: white;
-}
 #spielfeld{
 	position: absolute;
     width: 100px;
