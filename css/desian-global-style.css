@@ -10,6 +10,11 @@ body {
   margin: 0 auto;
   padding: 0 16px;;
   color: white;
+    background-image:
+        url("../images/kalo_chen-retro-10439660_1920.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .retro-title {
@@ -40,5 +45,5 @@ body {
 
 .retro-title .line {
   display: block;
-  margin-bottom: 0.4em;
+  margin-bottom: 0.2em;
 }

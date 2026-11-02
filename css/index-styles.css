@@ -3,6 +3,9 @@ header {
 }
 main {
     text-align: center;
+    background: linear-gradient(90deg, #120327 0%, #2b0d47 40%, #3d1369 100%);
+    border-radius: 20px;
+    padding: 20px;
 }
 table {
     margin: 0 auto;
