@@ -8,7 +8,7 @@ body {
   margin: 0;
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 16px;;
+  padding: 0 16px;
   color: white;
     background-image:
         url("../images/kalo_chen-retro-10439660_1920.jpg");
@@ -44,6 +44,39 @@ body {
 }
 
 .retro-title .line {
+  display: block;
+  margin-bottom: 0.2em;
+}
+
+
+
+.retro-ueber {
+  font-family: "Press Start 2P", monospace;
+  text-transform: uppercase;
+  font-size: clamp(0.75rem, 2vw, 2rem);
+  line-height: 0.9;
+  letter-spacing: 0.05em;
+  position: relative;
+  display: block;
+  color: #f7d9ff;
+  transform: skew(-6deg);
+  text-shadow:
+    4px 0 0 #000,
+    0 4px 0 #000,
+    -4px 0 0 #000,
+    0 -4px 0 #000,
+    6px 6px 0 #ff5ad9,
+    12px 12px 0 #8b2cff,
+    18px 18px 0 rgba(0,0,0,0.28);
+  -webkit-text-stroke: 3px #f7f7ff;
+  filter: drop-shadow(0 0 16px rgba(255, 90, 217, 0.5));
+  background: linear-gradient(180deg, #fef7ff 0%, #f8c4ff 20%, #f6a9ff 50%, #f7a0ff 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.retro-ueber .line {
   display: block;
   margin-bottom: 0.2em;
 }

@@ -21,40 +21,62 @@
             <nav>
                 <ul>
                     <li>
-                        <a href="./Ping-Pong.html">
-                            <img src="./images/ping-pong_icon.jpg" alt="">
-                            Ping-Pong
-                        </a>
+                        <a href="#games">Zu Spiele</a>
                     </li>
                     <li>
-                        <a href="./Schuter.html">
-                            <img src="./images/Sternzerstoerer.png" alt="">
-                            Actionspiel
-                        </a>
+                        <a href="#highscore">Zu Highscore</a>
                     </li>
                 </ul>
             </nav>
         </header>
         <main>
-            <h2>ArcadeGames</h2>
+            <h2 class="retro-ueber">
+                <span class="line">ArcadeGames</span>
+            </h2>
             <p class="pixel-text">Hier finden Sie eine Auswahl an klassischen Arcade-Spielen, die Sie direkt in Ihrem Browser spielen können. Von Ping-Pong über Tetris bis hin zu spannenden Actionspielen - es ist für jeden etwas dabei!</p>
             <p class="pixel-text">Wählen Sie einfach ein Spiel aus der Navigation aus und starten Sie Ihr Abenteuer!</p>
             <p class="pixel-text">Viel Spaß beim Spielen!</p>
-            <h3>Highscore</h3>
-        <table>
-            <tr>
-                <td>Spiel</td>
-                <td>Ping-Pong</td>
-                <td>Aktionspiel</td> 
-            </tr>
-            <tr>
-                <td>Punkte</td>
-                <td>18782</td>
-                <td>5005</td>
-            </tr>
-        </table>
+            <h2 id="games" class="retro-ueber">
+                <span class="line">Games</span>
+            </h2>
+            <ul>
+                <li>
+                    <a href="./Ping-Pong.html">
+                        <img src="./images/ping-pong_icon.jpg" alt="">
+                        Ping-Pong
+                    </a>
+                </li>
+                <li>
+                    <a href="./Schuter.html">
+                        <img src="./images/Sternzerstoerer.png" alt="">
+                        Actionspiel
+                    </a>
+                </li>
+            </ul>
+            <h2 id="highscore" class="retro-ueber">
+                <span class="line">Highscore</span>
+            </h2>
+            <table>
+                <tr>
+                    <td>Spiel</td>
+                    <td>Ping-Pong</td>
+                    <td>Aktionspiel</td> 
+                </tr>
+                <tr>
+                    <td>Punkte</td>
+                    <td>18782</td>
+                    <td>5005</td>
+                </tr>
+            </table>
         </main>
-
+        <aside>
+            <label for="sprache">Sprache auswahl</label>
+            <select id="sprache" name="sprache">
+                <option>Deutsch</option>
+                <option>Englisch</option>
+            </select>
+        <button id="login">Login</button>
+        </aside>
         <footer>
             <p>&copy; 2026 ArcadeGames</p>
         </footer>
