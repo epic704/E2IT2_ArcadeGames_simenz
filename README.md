@@ -24,3 +24,4 @@ Repository für die Entwiocklung des Web Projekts.
 - Pseudoklassen eingefügt
 - HTML Struktur in index gemacht
 - CSS für index.html verbessert
+- CSS Grid
