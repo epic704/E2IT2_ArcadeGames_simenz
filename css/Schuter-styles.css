@@ -53,16 +53,3 @@
 	background-color: orange;
 	border: 1px solid black;
 	}
-a:link{
-    color: #42f5e9;
-}
-a:hover{
-    color: green;
-}
-button:hover{
-    background-color: gray;
-    border: 1px, solid, black;
-}
-button:active{
-    background-color: red;
-}

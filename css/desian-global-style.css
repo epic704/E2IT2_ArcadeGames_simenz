@@ -73,6 +73,19 @@ footer {
 footer p {
   margin: 0;
 }
+a:link{
+    color: #42f5e9;
+}
+a:hover{
+    color: green;
+}
+button:hover{
+    background-color: gray;
+    border: 1px, solid, black;
+}
+button:active{
+    background-color: red;
+}
 
 .retro-title {
   font-family: "Press Start 2P", monospace;
@@ -104,8 +117,6 @@ footer p {
   display: block;
   margin-bottom: 0.2em;
 }
-
-
 
 .retro-ueber {
   font-family: "Press Start 2P", monospace;
