@@ -114,6 +114,14 @@ button:active{
     overflow-x: auto;
     white-space: nowrap;
   }
+  main ul {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  main ul img {
+    width: 80px;
+    height: 80px;
+  }
 }
 
 .retro-title {
