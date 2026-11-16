@@ -148,3 +148,31 @@ button:active{
   display: block;
   margin-bottom: 0.2em;
 }
+
+@media (max-width: 40em) {
+body {
+  font-family: "Press Start 2P", monospace;
+  background: linear-gradient(90deg, #120327 0%, #2b0d47 40%, #3d1369 100%);
+  display: grid;
+  grid-template-columns: repeat(1fr);
+  grid-template-areas: "h"
+                       "n"
+                       "m"
+                       "f";
+  gap: 25px;
+  place-items: center;
+  min-height: 50vh;
+  margin: 0;
+  max-width: 80%;
+  margin: 0 auto;
+  padding: 0 16px;
+  color: white;  
+}
+nav ul { 
+    display: flex;
+    flex-direction: column; 
+    gap: 4px; 
+    list-style: none; 
+    margin: 0; 
+    padding: 8px; }
+}
