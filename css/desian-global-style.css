@@ -4,72 +4,74 @@ body {
   font-family: "Press Start 2P", monospace;
   background: linear-gradient(90deg, #120327 0%, #2b0d47 40%, #3d1369 100%);
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-areas: "h h h"
-                       "n n a"
-                       "m m m"
-                       "f f f";
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-areas: "h h"
+                        "n n"
+                        "m m"
+                        "f f";
   gap: 25px;
   place-items: center;
   min-height: 50vh;
-  margin: 0;
-  max-width: 1200px;
   margin: 0 auto;
+  max-width: 1200px;
   padding: 0 16px;
   color: white;
-    background-image:
-        url("../images/kalo_chen-retro-10439660_1920.jpg");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-   
+  background-image: url("../images/kalo_chen-retro-10439660_1920.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
-header { 
-  grid-area: h; 
+header {
+  grid-area: h;
   text-align: center;
 }
-nav { 
-  grid-area: n; 
+
+nav {
+  grid-area: n;
   background: linear-gradient(90deg, #120327 0%, #2b0d47 40%, #3d1369 100%);
-  border-radius: 20px; 
+  border-radius: 20px;
 }
-nav ul { 
-    display: flex; 
-    gap: 4px; 
-    list-style: none; 
-    margin: 0; 
-    padding: 8px;
-    flex-wrap: wrap;
-    justify-content: center;
+
+nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 4px;
+  list-style: none;
+  margin: 0;
+  padding: 8px;
 }
+
 nav a {
-    display: block;
-    padding: 8px 14px; 
-    border-radius: 6px;
-    color: #e5e7eb; 
-    text-decoration: none;
+  display: block;
+  padding: 8px 14px;
+  border-radius: 6px;
+  color: #e5e7eb;
+  text-decoration: none;
 }
-nav a:hover { 
-    background: #374151; 
-    color: #fff; 
-    border-radius: 20px;
+
+nav a:hover {
+  background: #374151;
+  color: #fff;
+  border-radius: 20px;
 }
-main { 
+
+main {
   grid-area: m;
   width: min(100%, 1100px);
   box-sizing: border-box;
   text-align: center;
   background: linear-gradient(90deg, #120327 0%, #2b0d47 40%, #3d1369 100%);
   border-radius: 20px;
-  padding: 20px; 
+  padding: 20px;
 }
-aside{
-  grid-area: a; 
-  background: linear-gradient(90deg, #120327 0%, #2b0d47 40%, #3d1369 100%);
-  border-radius: 20px; 
+
+aside {
+  grid-area: a;
 }
-footer { 
+
+footer {
   grid-area: f;
   margin-top: 32px;
   padding: 16px 0;
@@ -77,31 +79,31 @@ footer {
   color: #666;
   text-align: center;
 }
+
 footer p {
   margin: 0;
 }
-a:link{
-    color: #42f5e9;
-}
-a:hover{
-    color: green;
-}
-button:hover{
-    background-color: gray;
-    border: 1px, solid, black;
-}
-button:active{
-    background-color: red;
+
+a:link {
+  color: #42f5e9;
 }
 
-@media (max-width: 40em) {
+a:hover {
+  color: green;
+}
+
+button:hover {
+  background-color: gray;
+  border: 1px solid black;
+}
+
+button:active {
+  background-color: red;
+}
+
+@media (max-width: 768px) {
   body {
     grid-template-columns: 1fr;
-    grid-template-areas: "h"
-                         "n"
-                         "m"
-                         "a"
-                         "f";
     gap: 16px;
     padding: 0 12px;
   }
@@ -114,20 +116,6 @@ button:active{
   main {
     width: 100%;
     padding: 16px 12px;
-  }
-
-  table {
-    display: block;
-    overflow-x: auto;
-    white-space: nowrap;
-  }
-  main ul {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-
-  main ul img {
-    width: 80px;
-    height: 80px;
   }
 }
 
@@ -148,7 +136,7 @@ button:active{
     0 -4px 0 #000,
     6px 6px 0 #ff5ad9,
     12px 12px 0 #8b2cff,
-    18px 18px 0 rgba(0,0,0,0.28);
+    18px 18px 0 rgba(0, 0, 0, 0.28);
   -webkit-text-stroke: 3px #f7f7ff;
   filter: drop-shadow(0 0 16px rgba(255, 90, 217, 0.5));
   background: linear-gradient(180deg, #fef7ff 0%, #f8c4ff 20%, #f6a9ff 50%, #f7a0ff 100%);
@@ -179,7 +167,7 @@ button:active{
     0 -4px 0 #000,
     6px 6px 0 #ff5ad9,
     12px 12px 0 #8b2cff,
-    18px 18px 0 rgba(0,0,0,0.28);
+    18px 18px 0 rgba(0, 0, 0, 0.28);
   -webkit-text-stroke: 3px #f7f7ff;
   filter: drop-shadow(0 0 16px rgba(255, 90, 217, 0.5));
   background: linear-gradient(180deg, #fef7ff 0%, #f8c4ff 20%, #f6a9ff 50%, #f7a0ff 100%);

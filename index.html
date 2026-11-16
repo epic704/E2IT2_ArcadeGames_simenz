@@ -1,14 +1,10 @@
 <!DOCTYPE html>
-<html>
+<html lang="de">
     <head>
-        <!-- Zeichensatzkodierung festlegen -->
-	    <meta http-equiv="Content Type" content="text/html" charset="utf-8" />
-	    <!-- Viewport festlegen -->
-	    <meta name="viewport" content="width=device-width, initial-scale=1.0">		
-	    <!-- Stylesheet laden -->
-	    <link rel="stylesheet" href="./css/index-styles.css" type="text/css" />
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="./css/index-styles.css" type="text/css" />
         <link rel="stylesheet" href="./css/desian-global-style.css" type="text/css" />
-	    <!-- Titel festlegen -->
         <title>ArcadeGames</title>
     </head>
     <body>
@@ -27,23 +23,23 @@
                         <a href="#highscore">Highscore</a>
                     </li>
                     <li>
-                        <a herf="login">Login</a>
+                        <a href="login">Login</a>
+                    </li>
+                    <li>
+                        <label for="sprache">Sprache auswahl</label>
+                        <select id="sprache" name="sprache">
+                            <option>Deutsch</option>
+                            <option>Englisch</option>
+                        </select>
                     </li>
                 </ul>
             </nav>
         </header>
-        <aside>
-            <label for="sprache">Sprache auswahl</label>
-                <select id="sprache" name="sprache">
-                    <option>Deutsch</option>
-                    <option>Englisch</option>
-                </select>
-        </aside>
         <main>
             <h2 class="retro-ueber">
                 <span class="line">ArcadeGames</span>
             </h2>
-            <p class="pixel-text">Hier finden Sie eine Auswahl an klassischen Arcade-Spielen, die Sie direkt in Ihrem Browser spielen können. Von Ping-Pong über Tetris bis hin zu spannenden Actionspielen - es ist für jeden etwas dabei!</p>
+            <p class="pixel-text">Hier finden Sie eine Auswahl an klassischen Arcade-Spielen, die Sie direkt in Ihrem Browser spielen können. Von Ping-Pong über Tetris bis hin zu spannenden Actionspielen – es ist für jeden etwas dabei!</p>
             <p class="pixel-text">Wählen Sie einfach ein Spiel aus der Navigation aus und starten Sie Ihr Abenteuer!</p>
             <p class="pixel-text">Viel Spaß beim Spielen!</p>
             <h2 id="games" class="retro-ueber">
@@ -52,37 +48,37 @@
             <ul>
                 <li>
                     <a href="./Ping-Pong.html">
-                        <img src="./images/ping-pong_icon.jpg" alt="">
+                        <img src="./images/ping-pong_icon.jpg" alt="Ping-Pong">
                         Ping-Pong
                     </a>
                 </li>
                 <li>
                     <a href="./Schuter.html">
-                        <img src="./images/shooter_icon.jpg" alt="">
+                        <img src="./images/shooter_icon.jpg" alt="Actionspiel">
                         Actionspiel
                     </a>
                 </li>
                 <li>
                     <a href=".">
-                        <img src="./images/tetris_icon.png" alt="">
+                        <img src="./images/tetris_icon.png" alt="Tetris">
                         Tetris
                     </a>
                 </li>
                 <li>
                     <a href="">
-                        <img src="./images/snake_icon.jpg" alt="">
+                        <img src="./images/snake_icon.jpg" alt="Snake">
                         Snake
                     </a>
                 </li>
                 <li>
                     <a href=".">
-                        <img src="./images/space_invaders_icon.jpeg" alt="">
+                        <img src="./images/space_invaders_icon.jpeg" alt="Space Invaders">
                         Space Invaders
                     </a>
                 </li>
                 <li>
                     <a href="">
-                        <img src="./images/pac-man_icon.png" alt="">
+                        <img src="./images/pac-man_icon.png" alt="Pac-Man">
                         Pac-Man
                     </a>
                 </li>
@@ -125,9 +121,7 @@
             <p>&copy; 2026 ArcadeGames</p>
         </footer>
 
-	    <!-- jQuery laden -->
-	    <script src="./javaskript/jquery-3.6.0.min.js"> </script>
-        <!-- JavaSkript laden -->
+        <script src="./javaskript/jquery-3.6.0.min.js"> </script>
         <script src="./javaskript/index-skript.js"></script>
     </body>
 </html>
