@@ -4,11 +4,11 @@ body {
   font-family: "Press Start 2P", monospace;
   background: linear-gradient(90deg, #120327 0%, #2b0d47 40%, #3d1369 100%);
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-areas: "h h"
-                        "n n"
-                        "m m"
-                        "f f";
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-areas: "h h h"
+                       "n n a"
+                       "m m m"
+                       "f f f";
   gap: 25px;
   place-items: center;
   min-height: 50vh;
@@ -65,7 +65,9 @@ main {
   padding: 20px; 
 }
 aside{
-   grid-area: a;
+  grid-area: a; 
+  background: linear-gradient(90deg, #120327 0%, #2b0d47 40%, #3d1369 100%);
+  border-radius: 20px; 
 }
 footer { 
   grid-area: f;
@@ -95,6 +97,11 @@ button:active{
 @media (max-width: 40em) {
   body {
     grid-template-columns: 1fr;
+    grid-template-areas: "h"
+                         "n"
+                         "m"
+                         "a"
+                         "f";
     gap: 16px;
     padding: 0 12px;
   }
