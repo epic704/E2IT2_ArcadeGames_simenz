@@ -33,6 +33,10 @@ nav {
   border-radius: 20px;
 }
 
+nav label {
+  display: none;
+}
+
 nav ul {
   display: flex;
   flex-wrap: wrap;
@@ -121,6 +125,7 @@ button:active {
   nav label {
     font-size: 1.5em;
     cursor: pointer;
+    display: block;
   }
 
   nav .ul-in-nav {
