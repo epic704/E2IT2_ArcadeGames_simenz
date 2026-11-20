@@ -1,0 +1,123 @@
+.login-page {
+    grid-template-areas:
+        "h h h"
+        "n n n"
+        "m m m"
+        "f f f";
+    grid-template-columns: repeat(3, 1fr);
+    min-height: 100vh;
+}
+
+.login-page .auth-main {
+    width: min(100%, 1000px);
+    box-sizing: border-box;
+    padding: 28px;
+}
+
+.auth-main > .retro-ueber {
+    margin: 10px 0 32px;
+}
+
+.auth-cards {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 24px;
+    text-align: left;
+}
+
+.auth-card {
+    padding: 24px;
+    border: 2px solid #ff5ad9;
+    border-radius: 14px;
+    background: rgba(18, 3, 39, 0.65);
+    box-shadow: 0 0 18px rgba(255, 90, 217, 0.2);
+}
+
+.auth-card h3 {
+    margin: 0 0 12px;
+    color: #f7a0ff;
+    font-size: clamp(0.8rem, 2vw, 1rem);
+    line-height: 1.8;
+}
+
+.auth-description {
+    min-height: 2em;
+    color: #e5e7eb;
+    font-family: Arial, sans-serif;
+    line-height: 1.5;
+}
+
+.auth-card form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.auth-card label {
+    margin-top: 8px;
+    color: #f7d9ff;
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+}
+
+.auth-card input {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 12px;
+    border: 2px solid #8b2cff;
+    border-radius: 6px;
+    background: #160625;
+    color: white;
+    font: 16px Arial, sans-serif;
+}
+
+.auth-card input:focus {
+    outline: 2px solid #ff5ad9;
+    border-color: #ff5ad9;
+}
+
+.auth-card button {
+    margin-top: 16px;
+    padding: 14px 12px;
+    border: 2px solid #ff5ad9;
+    border-radius: 8px;
+    background: linear-gradient(90deg, #8b2cff, #c026d3);
+    color: white;
+    font-family: "Press Start 2P", monospace;
+    font-size: 0.7rem;
+    line-height: 1.7;
+    cursor: pointer;
+}
+
+.auth-card button:hover {
+    background: linear-gradient(90deg, #a447ff, #ed45dc);
+    border-color: white;
+}
+
+.auth-card button:focus-visible {
+    outline: 3px solid white;
+    outline-offset: 3px;
+}
+
+@media (max-width: 40em) {
+    .login-page {
+        grid-template-areas:
+            "h"
+            "n"
+            "m"
+            "f";
+        grid-template-columns: 1fr;
+    }
+
+    .login-page .auth-main {
+        padding: 20px 14px;
+    }
+
+    .auth-cards {
+        grid-template-columns: 1fr;
+    }
+
+    .auth-card {
+        padding: 20px 16px;
+    }
+}
