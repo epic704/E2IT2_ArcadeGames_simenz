@@ -2,7 +2,6 @@
 
 body {
   font-family: "Press Start 2P", monospace;
-  background: linear-gradient(90deg, #120327 0%, #2b0d47 40%, #3d1369 100%);
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-areas: "h h h"
@@ -35,6 +34,12 @@ nav {
 
 nav label {
   display: none;
+}
+nav label div {
+  width: 30px;
+  height: 4px;
+  background-color: white;
+  margin: 4px auto;
 }
 
 nav ul {
@@ -120,6 +125,9 @@ button:active {
                          "f";
     gap: 16px;
     padding: 0 12px;
+    background-image: none;
+    background: linear-gradient(90deg, #120327 0%, #2b0d47 40%, #3d1369 100%);
+    
   }
 
   nav label {
