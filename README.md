@@ -25,3 +25,6 @@ Repository für die Entwiocklung des Web Projekts.
 - HTML Struktur in index gemacht
 - CSS für index.html verbessert
 - CSS Grid
+- CSS Modular
+- Login Seite hochgeladen
+- 
