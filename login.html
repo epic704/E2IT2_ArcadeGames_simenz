@@ -3,10 +3,8 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <link rel="stylesheet" href="./css/desian-global-style.css">
     <link rel="stylesheet" href="./css/login-style.css">
-
     <title>Login | ArcadeGames</title>
 </head>
 <body class="login-page">
@@ -14,95 +12,43 @@
         <h1 class="retro-title">
             <span class="line">ArcadeGames Login</span>
         </h1>
-
         <nav>
             <a href="./index.html">Zurück zur Haupt Seite</a>
         </nav>
     </header>
-
     <main class="auth-main">
         <h2 class="retro-ueber">
             <span class="line">Anmeldebereich</span>
         </h2>
-
         <div class="auth-cards">
             <section class="auth-card" aria-labelledby="login-title">
                 <h3 id="login-title">Login</h3>
-                <p class="auth-description">Schön, dass du wieder da bist!</p>
-
+                <p class="auth-description">Schön dass du da bist!</p>
                 <form action="#" method="post">
                     <label for="login-email">E-Mail-Adresse</label>
-                    <input
-                        type="email"
-                        id="login-email"
-                        name="email"
-                        autocomplete="email"
-                        required
-                    >
-
+                    <input type="email" id="login-email" name="email" autocomplete="email" required>
                     <label for="login-password">Passwort</label>
-                    <input
-                        type="password"
-                        id="login-password"
-                        name="password"
-                        autocomplete="current-password"
-                        required
-                    >
-
+                    <input type="password" id="login-password" name="password" autocomplete="current-password" required>
                     <button type="submit">Einloggen</button>
                 </form>
             </section>
-
             <section class="auth-card" aria-labelledby="register-title">
                 <h3 id="register-title">Konto erstellen</h3>
-                <p class="auth-description">Erstelle deinen ArcadeGames-Account.</p>
-
+                <p class="auth-description">ArcadeGames-Account erstellen</p>
                 <form action="#" method="post">
                     <label for="register-username">Spielername</label>
-                    <input
-                        type="text"
-                        id="register-username"
-                        name="username"
-                        autocomplete="username"
-                        minlength="3"
-                        required
-                    >
-
+                    <input type="text" id="register-username" name="username" autocomplete="username" minlength="3" required>
                     <label for="register-email">E-Mail-Adresse</label>
-                    <input
-                        type="email"
-                        id="register-email"
-                        name="email"
-                        autocomplete="email"
-                        required
-                    >
-
+                    <input type="email" id="register-email" name="email" autocomplete="email" required>
                     <label for="register-password">Passwort</label>
-                    <input
-                        type="password"
-                        id="register-password"
-                        name="password"
-                        autocomplete="new-password"
-                        minlength="8"
-                        required
-                    >
-
+                    <input type="password" id="register-password" name="password" autocomplete="new-password" minlength="8" required>
                     <label for="register-password-confirm">Passwort wiederholen</label>
-                    <input
-                        type="password"
-                        id="register-password-confirm"
-                        name="password-confirm"
-                        autocomplete="new-password"
-                        minlength="8"
-                        required
-                    >
-
+                    <input type="password" id="register-password-confirm" name="password-confirm" autocomplete="new-password" minlength="8" required>
                     <button type="submit">Konto erstellen</button>
                 </form>
             </section>
         </div>
     </main>
-
     <footer>
         <p>&copy; 2026 ArcadeGames</p>
     </footer>

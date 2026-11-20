@@ -5,8 +5,8 @@ body {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-areas: "h h h"
-                        "n n n"
-                        "m m a"
+                        "n n a"
+                        "m m m"
                         "f f f";
   gap: 25px;
   place-items: center;
@@ -111,25 +111,12 @@ button:hover {
 button:active {
   background-color: red;
 }
+
 #menu-toggle {
   display: none;
 }
 
 @media (max-width: 40em) {
-  body {
-    grid-template-columns: 1fr;
-    grid-template-areas: "h"
-                         "n"
-                         "m"
-                         "a"
-                         "f";
-    gap: 16px;
-    padding: 0 12px;
-    background-image: none;
-    background: linear-gradient(90deg, #120327 0%, #2b0d47 40%, #3d1369 100%);
-    
-  }
-
   nav label {
     font-size: 1.5em;
     cursor: pointer;

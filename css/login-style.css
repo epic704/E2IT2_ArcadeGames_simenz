@@ -1,10 +1,10 @@
 .login-page {
+    grid-template-columns: repeat(3, 1fr);
     grid-template-areas:
         "h h h"
         "n n n"
         "m m m"
         "f f f";
-    grid-template-columns: repeat(3, 1fr);
     min-height: 100vh;
 }
 
@@ -101,12 +101,12 @@
 
 @media (max-width: 40em) {
     .login-page {
+        grid-template-columns: 1fr;
         grid-template-areas:
             "h"
             "n"
             "m"
             "f";
-        grid-template-columns: 1fr;
     }
 
     .login-page .auth-main {
