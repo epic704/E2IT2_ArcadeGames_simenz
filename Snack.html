@@ -1,3 +1,5 @@
+<!DOCTYPE html>
+<html lang="de">
 <html>
     <head>
         <!-- Zeichensatzkodierung festlegen -->
@@ -11,28 +13,35 @@
         <title>Snack</title>
     </head>
 
-  <div class="arcade-cabinet">
-    <div class="header">
+<body>
+  <header>
+    <h1 class="retro-title"><span class="line">Snake</span></h1>
+  </header>
+
+  <main class="arcade-cabinet">
+    <h2 class="retro-ueber"><span class="line">Spielstand</span></h2>
+
+    <div class="game-header">
       <div class="score">SCORE: <span>040</span></div>
       <div class="highscore">BEST: <span>120</span></div>
     </div>
 
-    <div class="board">
-      <!-- Schlangenschwanz & Körper (Zeile 5) -->
+    <div class="board" aria-label="Snake Spielfeld">
       <div class="snake" style="grid-column: 3; grid-row: 5;"></div>
       <div class="snake" style="grid-column: 4; grid-row: 5;"></div>
       <div class="snake" style="grid-column: 5; grid-row: 5;"></div>
-      <!-- Schlangenkopf -->
       <div class="snake-head" style="grid-column: 6; grid-row: 5;"></div>
-
-      <!-- Apfel (Zeile 5, Spalte 9) -->
       <div class="food" style="grid-column: 9; grid-row: 5;"></div>
     </div>
 
-    <div class="footer">
+    <div class="game-footer">
       <span>[PFEILTASTEN]</span>
       <span class="badge">DEMO MODE</span>
     </div>
-  </div>
 
+    <a class="home-link" href="./index.html">Zurück zu ArcadeGames</a>
+  </main>
+
+  <footer><p>&copy; 2026 ArcadeGames</p></footer>
+</body>
 </html>

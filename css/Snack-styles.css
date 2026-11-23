@@ -1,116 +1,130 @@
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
+body {
+  grid-template-areas:
+    "h h h"
+    "m m m"
+    "f f f";
+  min-height: 100vh;
+  align-content: center;
+}
 
-    body {
-      background-color: #1a1a2e;
-      color: #ffffff;
-      font-family: 'Courier New', Courier, monospace;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      min-height: 100vh;
-    }
+.arcade-cabinet {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  width: min(100%, 520px);
+}
 
-    /* Äußerer Retro-Rahmen */
-    .arcade-cabinet {
-      background-color: #16213e;
-      border: 4px solid #0f3460;
-      border-radius: 12px;
-      padding: 20px;
-      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.6);
-      width: 360px;
-    }
+.arcade-cabinet .retro-ueber {
+  margin: 0;
+}
 
-    /* Kopfbereich mit Score */
-    .header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      margin-bottom: 15px;
-      padding-bottom: 10px;
-      border-bottom: 2px dashed #0f3460;
-      font-size: 1.1rem;
-      font-weight: bold;
-    }
+.game-header {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  width: 100%;
+  padding-bottom: 12px;
+  border-bottom: 2px dashed rgba(247, 217, 255, 0.45);
+  font-size: clamp(0.55rem, 2vw, 0.85rem);
+}
 
-    .score span {
-      color: #4ecca3;
-    }
+.score span { color: #42f5e9; }
+.highscore span { color: #ff8be8; }
 
-    .highscore span {
-      color: #e94560;
-    }
+.board {
+  display: grid;
+  grid-template-columns: repeat(10, minmax(0, 1fr));
+  grid-template-rows: repeat(10, minmax(0, 1fr));
+  width: min(100%, 312px);
+  aspect-ratio: 1;
+  border: 3px solid #f7a0ff;
+  border-radius: 8px;
+  background-color: #120327;
+  background-image:
+    linear-gradient(to right, rgba(255, 255, 255, 0.08) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.08) 1px, transparent 1px);
+  background-size: 10% 10%;
+  box-shadow: 0 0 22px rgba(255, 90, 217, 0.25);
+}
 
-    /* 10x10 Spielfeld-Raster */
-    .board {
-      display: grid;
-      grid-template-columns: repeat(10, 1fr);
-      grid-template-rows: repeat(10, 1fr);
-      width: 312px;
-      height: 312px;
-      background-color: #0b0c10;
-      border: 3px solid #4ecca3;
-      /* Dezentes Gittermuster */
-      background-image: 
-        linear-gradient(to right, rgba(255,255,255,0.04) 1px, transparent 1px),
-        linear-gradient(to bottom, rgba(255,255,255,0.04) 1px, transparent 1px);
-      background-size: 10% 10%;
-    }
+.snake {
+  border: 2px solid #120327;
+  border-radius: 4px;
+  background-color: #42f5e9;
+}
 
-    /* Schlangenkörper */
-    .snake {
-      background-color: #4ecca3;
-      border: 2px solid #0b0c10;
-      border-radius: 4px;
-    }
+.snake-head {
+  position: relative;
+  border: 2px solid #120327;
+  border-radius: 6px;
+  background-color: #b7fff8;
+}
 
-    /* Schlangenkopf mit Augen */
-    .snake-head {
-      background-color: #45b393;
-      border: 2px solid #0b0c10;
-      border-radius: 6px;
-      position: relative;
-    }
+.snake-head::before,
+.snake-head::after {
+  position: absolute;
+  right: 5px;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background-color: #120327;
+  content: "";
+}
 
-    .snake-head::before,
-    .snake-head::after {
-      content: '';
-      position: absolute;
-      width: 4px;
-      height: 4px;
-      background-color: #0b0c10;
-      border-radius: 50%;
-      right: 5px;
-    }
+.snake-head::before { top: 5px; }
+.snake-head::after { bottom: 5px; }
 
-    .snake-head::before { top: 5px; }
-    .snake-head::after { bottom: 5px; }
+.food {
+  margin: 4px;
+  border-radius: 50%;
+  background-color: #ff5ad9;
+  box-shadow: 0 0 10px #ff5ad9;
+}
 
-    /* Futter (Apfel) */
-    .food {
-      background-color: #e94560;
-      border-radius: 50%;
-      margin: 4px;
-      box-shadow: 0 0 10px #e94560;
-    }
+.game-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+  color: #e5c7f5;
+  font-size: clamp(0.5rem, 1.5vw, 0.7rem);
+}
 
-    /* Fußbereich mit Fake-Steuerung */
-    .footer {
-      margin-top: 15px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      font-size: 0.85rem;
-      color: #8d99ae;
-    }
+.badge {
+  padding: 6px 8px;
+  border: 1px solid rgba(247, 217, 255, 0.4);
+  border-radius: 6px;
+  color: #42f5e9;
+  white-space: nowrap;
+}
 
-    .badge {
-      background-color: #0f3460;
-      color: #4ecca3;
-      padding: 4px 8px;
-      border-radius: 4px;
-      font-weight: bold;
-    }
+.home-link {
+  display: inline-block;
+  padding: 10px 14px;
+  border: 1px solid rgba(247, 217, 255, 0.5);
+  border-radius: 8px;
+  color: #42f5e9;
+  font-size: clamp(0.5rem, 1.5vw, 0.7rem);
+  text-decoration: none;
+}
+
+.home-link:hover {
+  background: rgba(255, 90, 217, 0.16);
+  color: #fff;
+}
+
+@media (max-width: 40em) {
+  body {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "h"
+      "m"
+      "f";
+  }
+
+  .arcade-cabinet {
+    padding: 20px 12px;
+  }
+}

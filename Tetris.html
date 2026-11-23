@@ -1,3 +1,5 @@
+<!DOCTYPE html>
+<html lang="de">
 <html>
     <head>
         <!-- Zeichensatzkodierung festlegen -->
@@ -10,7 +12,13 @@
 	    <!-- Titel festlegen -->
         <title>Tetris</title>
     </head>
+<body>
+  <header>
+    <h1 class="retro-title"><span class="line">Tetris</span></h1>
+  </header>
+
   <main class="game">
+    <h2 class="retro-ueber"><span class="line">Spielfeld</span></h2>
     <div class="board" aria-label="Tetris Spielfeld">
       <!-- Untere Reihe (Reihe 20) -->
       <div class="cell cyan" style="grid-column: 1; grid-row: 20;"></div>
@@ -33,7 +41,10 @@
       <div class="cell purple" style="grid-column: 5; grid-row: 4;"></div>
       <div class="cell purple" style="grid-column: 6; grid-row: 4;"></div>
       <div class="cell purple" style="grid-column: 5; grid-row: 5;"></div>
-            </div>
-        </main>
-    </body>
+    </div>
+
+    <a class="home-link" href="./index.html">Zurück zu ArcadeGames</a>
+  </main>
+
+  <footer><p>&copy; 2026 ArcadeGames</p></footer>
 </html>
