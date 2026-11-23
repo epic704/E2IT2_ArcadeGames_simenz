@@ -5,22 +5,35 @@
 	    <!-- Viewport festlegen -->
 	    <meta name="viewport" content="width=device-width, initial-scale=1.0">		
 	    <!-- Stylesheet laden -->
+        <link rel="stylesheet" href="./css/desian-global-style.css">
 	    <link rel="stylesheet" href="./css/Tetris-styles.css" type="text/css" />
 	    <!-- Titel festlegen -->
         <title>Tetris</title>
     </head>
-    <body>
-        <h1>Wilkommen bei Tetris</h1>
-        <hr>
-        <p><a href="./index.html">Zur Startseite</a></p>
-        <div class="canvas_wrap">
-			<canvas id="tetris"></canvas>
-			<button type="button" id="start_game">Start</button>
-		</div>
+  <main class="game">
+    <div class="board" aria-label="Tetris Spielfeld">
+      <!-- Untere Reihe (Reihe 20) -->
+      <div class="cell cyan" style="grid-column: 1; grid-row: 20;"></div>
+      <div class="cell cyan" style="grid-column: 2; grid-row: 20;"></div>
+      <div class="cell cyan" style="grid-column: 3; grid-row: 20;"></div>
+      <div class="cell cyan" style="grid-column: 4; grid-row: 20;"></div>
+      <div class="cell yellow" style="grid-column: 5; grid-row: 20;"></div>
+      <div class="cell yellow" style="grid-column: 6; grid-row: 20;"></div>
+      <div class="cell green" style="grid-column: 8; grid-row: 20;"></div>
+      <div class="cell green" style="grid-column: 9; grid-row: 20;"></div>
 
-	    <!-- jQuery laden -->
-	    <script src="./javaskript/jquery-3.6.0.min.js"> </script>
-        <!-- JavaSkript laden -->
-        <script src="./javaskript/Tetris-skript.js"></script>
+      <!-- Reihe 19 -->
+      <div class="cell yellow" style="grid-column: 5; grid-row: 19;"></div>
+      <div class="cell yellow" style="grid-column: 6; grid-row: 19;"></div>
+      <div class="cell green" style="grid-column: 7; grid-row: 19;"></div>
+      <div class="cell green" style="grid-column: 8; grid-row: 19;"></div>
+
+      <!-- Fallendes T-Tetromino -->
+      <div class="cell purple" style="grid-column: 4; grid-row: 4;"></div>
+      <div class="cell purple" style="grid-column: 5; grid-row: 4;"></div>
+      <div class="cell purple" style="grid-column: 6; grid-row: 4;"></div>
+      <div class="cell purple" style="grid-column: 5; grid-row: 5;"></div>
+            </div>
+        </main>
     </body>
 </html>

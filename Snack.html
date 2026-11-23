@@ -5,30 +5,34 @@
 	    <!-- Viewport festlegen -->
 	    <meta name="viewport" content="width=device-width, initial-scale=1.0">		
 	    <!-- Stylesheet laden -->
+        <link rel="stylesheet" href="./css/desian-global-style.css">
 	    <link rel="stylesheet" href="./css/Snack-styles.css" type="text/css" />	
 	    <!-- Titel festlegen -->
         <title>Snack</title>
     </head>
-    <body>
-        <h1>Wilkommen bei Snack</h1>
-        <hr>
-        <p><a href="./index.html">Zur Startseite</a></p>
-        <button id="play">Spiel starten</button>
-        <div id="spielfeld">
-            <div id="apfel"></div>
-            <div id="orange"></div>
-            <div id="snack"></div>
-        </div>
-        <button id="reset">Spielfeld zurücksetzen</button>
 
+  <div class="arcade-cabinet">
+    <div class="header">
+      <div class="score">SCORE: <span>040</span></div>
+      <div class="highscore">BEST: <span>120</span></div>
+    </div>
 
+    <div class="board">
+      <!-- Schlangenschwanz & Körper (Zeile 5) -->
+      <div class="snake" style="grid-column: 3; grid-row: 5;"></div>
+      <div class="snake" style="grid-column: 4; grid-row: 5;"></div>
+      <div class="snake" style="grid-column: 5; grid-row: 5;"></div>
+      <!-- Schlangenkopf -->
+      <div class="snake-head" style="grid-column: 6; grid-row: 5;"></div>
 
+      <!-- Apfel (Zeile 5, Spalte 9) -->
+      <div class="food" style="grid-column: 9; grid-row: 5;"></div>
+    </div>
 
-        
-        
-	    <!-- jQuery laden -->
-	    <script src="./javaskript/jquery-3.6.0.min.js"> </script>
-        <!-- JavaSkript laden -->
-        <script src="./javaskript/Snack-skript.js"></script>
-    </body>
+    <div class="footer">
+      <span>[PFEILTASTEN]</span>
+      <span class="badge">DEMO MODE</span>
+    </div>
+  </div>
+
 </html>
