@@ -14,6 +14,8 @@ Repository für die Entwiocklung des Web Projekts.
 - Punkte System erstellen
 - Höstpunkt zahlen anzeigen lassen für Jedes Spiel einzeln
 - Testen
+- Snack, Tetris und andere als Statische Seiten einbauen
+- Bei spielen wenn man auf dies geht eine vorschau öffnet wie bei wikipedia
 
 ## Erledigt
 - HTML Grundstruktur erstellen
