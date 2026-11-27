@@ -1,33 +1,59 @@
 <!DOCTYPE html>
-<html>
+<html lang="de">
     <head>
         <!-- Zeichensatzkodierung festlegen -->
-	    <meta http-equiv="Content Type" content="text/html" charset="utf-8" />
-	    <!-- Viewport festlegen -->
-	    <meta name="viewport" content="width=device-width, initial-scale=1.0">		
-	    <!-- CSS laden -->
-	    <link rel="stylesheet" href="./css/Ping-Pong-styles.css" type="text/css" />
+        <meta charset="utf-8" />
+        <!-- Viewport festlegen -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- CSS laden (erst global, dann seitenspezifisch) -->
         <link rel="stylesheet" href="./css/desian-global-style.css" type="text/css" />
-	    <!-- Titel festlegen -->
+        <link rel="stylesheet" href="./css/Ping-Pong-styles.css" type="text/css" />
+        <!-- Titel festlegen -->
         <title>Ping-Pong</title>
     </head>
-    <body>
-        <h1>Wilkommen bei Ping-Pong</h1>
-        <hr>
-        <p><a href="./index.html">Zur Startseite</a></p>
-        <button id="play">Spiel starten</button>
-        <div id="spielfeld">
-            <div id="ball"></div>
-            <div id="s1"></div>
-            <div id="s2"></div>
-        </div>
-        <button id="reset">Spiel zurücksetzen</button>
 
+<body>
+  <header>
+    <h1 class="retro-title"><span class="line">Ping-Pong</span></h1>
+  </header>
 
+  <main class="arcade-cabinet">
+    <h2 class="retro-ueber"><span class="line">Spielstand</span></h2>
 
-	    <!-- jQuery laden -->
-	    <script src="./javaskript/jquery-3.6.0.min.js"> </script>
-        <!-- JavaSkript laden -->
-        <script src="./javaskript/Ping-Pong-skript.js"></script>
-    </body>
+    <!-- Punktestand der beiden Spieler -->
+    <div class="game-header">
+      <div class="score">SPIELER 1: <span id="punkte1">0</span></div>
+      <div class="highscore">SPIELER 2: <span id="punkte2">0</span></div>
+    </div>
+
+    <!-- Rahmen, damit das Spielfeld auf kleinen Bildschirmen scrollbar bleibt -->
+    <div class="spielfeld-rahmen">
+      <div id="spielfeld" aria-label="Ping-Pong Spielfeld">
+        <div id="ball"></div>
+        <div id="s1"></div>
+        <div id="s2"></div>
+      </div>
+    </div>
+
+    <!-- Knöpfe zum Starten und Zurücksetzen -->
+    <div class="steuerung">
+      <button id="play">Spiel starten</button>
+      <button id="reset">Zurücksetzen</button>
+    </div>
+
+    <div class="game-footer">
+      <span>[W/S] SPIELER 1</span>
+      <span class="badge">[O/L] SPIELER 2</span>
+    </div>
+
+    <a class="home-link" href="./index.html">Zurück zu ArcadeGames</a>
+  </main>
+
+  <footer><p>&copy; 2026 ArcadeGames</p></footer>
+
+  <!-- jQuery laden -->
+  <script src="./javaskript/jquery-3.6.0.min.js"></script>
+  <!-- JavaSkript laden -->
+  <script src="./javaskript/Ping-Pong-skript.js"></script>
+</body>
 </html>

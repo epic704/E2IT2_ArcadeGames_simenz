@@ -1,67 +1,167 @@
 @charset "utf-8";
-#spielfeld{
-    position: relative;
-	width: 10px;
-	height: 10px;
-    border: 1px solid black;
-    background-color: cyan;
-    top: 10px;
-    right: 10px;
-    }
-#ball{
-    position: absolute;
-    width: 10px;
-    height: 10px;
-    border: 1px solid black;
-    border-radius: 25%;
-    background-color: white;
-    top: 50%;
-    left: 50%;
-    margin-top: -7.5px;
-    margin-left: -7.5px;  
-    }
-#s1{
-    position: absolute;
-    width: 10px;
-    height: 10px;
-    border: 1px solid black;
-    border-radius: 25%;
-    background-color: red;
-    top: 10px;
-    left: 10px;
-    }
-#s2{
-    position: absolute;
-    width: 10px;
-    height: 10px;
-    border: 1px solid black;
-    border-radius: 25%;
-    background-color: blue;
-    top: 10px;
-    right: 10px;
-    }
 
-.links { left: 10px; }
-.rechts { right: 10px; }
+/* Seitenlayout wie bei Snake: Header, Main, Footer untereinander */
+body {
+  grid-template-areas:
+    "h h h"
+    "m m m"
+    "f f f";
+  min-height: 100vh;
+  align-content: center;
+}
 
-@keyframes pingpong {
-  0% {
-    transform: translate(0, 0);
+/* Spielkasten (gleich wie Snake, nur breiter) */
+.arcade-cabinet {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  width: min(100%, 860px);
+  min-width: 0; /* verhindert, dass das 800px-Spielfeld die Seite breiter macht */
+}
+
+.arcade-cabinet .retro-ueber {
+  margin: 0;
+}
+
+/* Punktestand oben */
+.game-header {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  width: 100%;
+  padding-bottom: 12px;
+  border-bottom: 2px dashed rgba(247, 217, 255, 0.45);
+  font-size: clamp(0.55rem, 2vw, 0.85rem);
+}
+
+.score span { color: #ff5ad9; }
+.highscore span { color: #42f5e9; }
+
+/* Rahmen um das Spielfeld: scrollt, falls der Bildschirm zu schmal ist */
+.spielfeld-rahmen {
+  max-width: 100%;
+  overflow-x: auto;
+}
+
+/* Spielfeld (Größe wird vom JavaScript gesetzt: 800 x 600) */
+#spielfeld {
+  position: relative;
+  width: 800px;
+  height: 600px;
+  border: 3px solid #f7a0ff;
+  border-radius: 8px;
+  background-color: #120327;
+  /* Mittellinie und Raster wie bei Snake */
+  background-image:
+    linear-gradient(to right, transparent calc(50% - 2px), rgba(247, 217, 255, 0.35) calc(50% - 2px), rgba(247, 217, 255, 0.35) calc(50% + 2px), transparent calc(50% + 2px)),
+    linear-gradient(to right, rgba(255, 255, 255, 0.06) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.06) 1px, transparent 1px);
+  background-size: 100% 100%, 40px 40px, 40px 40px;
+  box-shadow: 0 0 22px rgba(255, 90, 217, 0.25);
+}
+
+/* Ball */
+#ball {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: #fff;
+  box-shadow: 0 0 12px #fff, 0 0 20px #f7a0ff;
+}
+
+/* Schläger Spieler 1 (links, pink) */
+#s1 {
+  position: absolute;
+  border-radius: 6px;
+  background-color: #ff5ad9;
+  box-shadow: 0 0 14px #ff5ad9;
+}
+
+/* Schläger Spieler 2 (rechts, türkis) */
+#s2 {
+  position: absolute;
+  border-radius: 6px;
+  background-color: #42f5e9;
+  box-shadow: 0 0 14px #42f5e9;
+}
+
+/* Knöpfe im Arcade-Look */
+.steuerung {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+}
+
+.steuerung button {
+  padding: 12px 18px;
+  border: 3px solid #f7a0ff;
+  border-radius: 8px;
+  background-color: #120327;
+  color: #42f5e9;
+  font-family: "Press Start 2P", monospace;
+  font-size: clamp(0.55rem, 1.8vw, 0.8rem);
+  box-shadow: 0 0 16px rgba(255, 90, 217, 0.45);
+  cursor: pointer;
+}
+
+.steuerung button:hover {
+  background-color: #ff5ad9;
+  color: #fff;
+}
+
+/* Fußzeile im Spielkasten */
+.game-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+  color: #e5c7f5;
+  font-size: clamp(0.5rem, 1.5vw, 0.7rem);
+}
+
+.badge {
+  padding: 6px 8px;
+  border: 1px solid rgba(247, 217, 255, 0.4);
+  border-radius: 6px;
+  color: #42f5e9;
+  white-space: nowrap;
+}
+
+/* Link zurück zur Startseite */
+.home-link {
+  display: inline-block;
+  padding: 10px 14px;
+  border: 1px solid rgba(247, 217, 255, 0.5);
+  border-radius: 8px;
+  color: #42f5e9;
+  font-size: clamp(0.5rem, 1.5vw, 0.7rem);
+  text-decoration: none;
+}
+
+.home-link:hover {
+  background: rgba(255, 90, 217, 0.16);
+  color: #fff;
+}
+
+/* Handy-Ansicht */
+@media (max-width: 40em) {
+  body {
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-areas:
+      "h"
+      "m"
+      "f";
   }
-  25% {
-    /* Fliegt nach rechts oben an die Wand */
-    transform: translate(175px, -110px); 
+
+  .arcade-cabinet {
+    padding: 20px 12px;
   }
-  50% {
-    /* Prallt ab zum rechten Schläger */
-    transform: translate(175px, 20px); 
-  }
-  75% {
-    /* Fliegt nach links unten an die Wand */
-    transform: translate(-175px, 110px);
-  }
-  100% {
-    /* Zurück zum Start (linker Schläger) */
-    transform: translate(0, 0);
+
+  .game-footer {
+    flex-direction: column;
   }
 }
