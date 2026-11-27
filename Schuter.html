@@ -1,38 +1,48 @@
 <!DOCTYPE html>
 <html lang="de">
-	<head>
-		<!-- Zeichensatzkodierung festlegen -->
-		<meta http-equiv="Content Type" content="text/html" charset="utf-8" />
-		<!-- Viewport festlegen -->
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">		
-		<!-- Stylesheet laden -->
-		<link rel="stylesheet" href="./css/Schuter-styles.css" type="text/css" />
-		<link rel="stylesheet" href="./css/desian-global-style.css" type="text/css" />
-		<!-- Titel festlegen -->
-		<title>Actionspiel</title>
-	</head>
-	<body>
-		<!-- HTML-Code -->
-		<header>
-			<h1>
-			Wilkommen bei Actionspiel
-			</h1>
-			<nav>
-				 <p><a href="./index.html">Zur Startseite</a></p>
-			</nav>
-		</header>
-		<main>
-		<div id="status"></div>
-		<div id="spielfeld">
-   			<button id="knopf">Spiel starten</button>
-			<div id="ziel"></div>
-   			<div id="ergebnis"></div>
-		</div>
-		</main>
+    <head>
+        <!-- Zeichensatzkodierung festlegen -->
+        <meta charset="utf-8" />
+        <!-- Viewport festlegen -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- Stylesheet laden (erst global, dann seitenspezifisch) -->
+        <link rel="stylesheet" href="./css/desian-global-style.css" type="text/css" />
+        <link rel="stylesheet" href="./css/Schuter-styles.css" type="text/css" />
+        <!-- Titel festlegen -->
+        <title>Shooter</title>
+    </head>
 
-	    <!-- jQuery laden -->
-	    <script src="./javaskript/jquery-3.6.0.min.js"> </script>
-        <!-- JavaSkript laden -->
-        <script src="./javaskript/Schulter-skript.js"></script>
-	</body>
+<body>
+  <header>
+    <h1 class="retro-title"><span class="line">Shooter</span></h1>
+  </header>
+
+  <main class="arcade-cabinet">
+    <h2 class="retro-ueber"><span class="line">Spielstand</span></h2>
+
+    <!-- Statusanzeige: wird vom JavaScript gefüllt -->
+    <div id="status" class="game-header">Drücke auf "Spiel starten"</div>
+
+    <!-- Spielfeld mit Startknopf, Ziel und Ergebnis -->
+    <div id="spielfeld" aria-label="Shooter Spielfeld">
+      <button id="knopf">Spiel starten</button>
+      <div id="ziel"></div>
+      <div id="ergebnis"></div>
+    </div>
+
+    <div class="game-footer">
+      <span>[MAUS: ZIEL ANKLICKEN]</span>
+      <span class="badge">DANEBEN = -LEBEN</span>
+    </div>
+
+    <a class="home-link" href="./index.html">Zurück zu ArcadeGames</a>
+  </main>
+
+  <footer><p>&copy; 2026 ArcadeGames</p></footer>
+
+  <!-- jQuery laden -->
+  <script src="./javaskript/jquery-3.6.0.min.js"></script>
+  <!-- JavaSkript laden -->
+  <script src="./javaskript/Schulter-skript.js"></script>
+</body>
 </html>

@@ -12,8 +12,11 @@ var timer2;
 var leben;
 
 function malePunkt(){
-    var x=Math.random()*(spielfeld_x - 2 * zielradius);
-    var y=Math.random()*(spielfeld_y - 2 * zielradius);
+    // Echte Größe von Spielfeld und Ziel lesen (passt sich dem Bildschirm an)
+    var breite = $("#spielfeld").width() - $("#ziel").outerWidth();
+    var hoehe = $("#spielfeld").height() - $("#ziel").outerHeight();
+    var x=Math.random()*breite;
+    var y=Math.random()*hoehe;
     $("#ziel").css("left",x+"px").css("top",y+"px").show();
     timer2=setTimeout(malePunkt, 2000);
 }
@@ -28,9 +31,6 @@ function maleStatus(){
 
 // Wenn Seite geladen ist
 $(document).ready(function() {
-
-	$("#spielfeld").css("width", spielfeld_x + "px").css("height", spielfeld_y + "px");
-	$("#status").css("width", spielfeld_x + "px");
 
     $("#knopf").click(function(event){
 	event.stopPropagation(); 
